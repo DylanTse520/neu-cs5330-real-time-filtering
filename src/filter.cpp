@@ -287,7 +287,7 @@ int sobelX3x3(const cv::Mat &src, cv::Mat &dst)
     {
       for (int c = 0; c < 3; c++)
       {
-        dptr[j][c] = (-1 * rptr[j - 1][c] + rptr[j + 1][c]) / 2;
+        dptr[j][c] = -1 * rptr[j - 1][c] + rptr[j + 1][c];
       }
     }
   }
@@ -316,7 +316,7 @@ int sobelY3x3(const cv::Mat &src, cv::Mat &dst)
     {
       for (int c = 0; c < 3; c++)
       {
-        iptr[j][c] = (rptrm1[j][c] - rptrp1[j][c]) / 2;
+        iptr[j][c] = rptrm1[j][c] - rptrp1[j][c];
       }
     }
   }
